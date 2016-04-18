@@ -15,6 +15,7 @@ ElectricData$FullDATE <- strptime(paste(ElectricData$Date,ElectricData$Time),"%d
 
 ## Plot 3
 par(mfrow = c(1,1), mar = c(3,4,1,1))
+quartz()
 with(ElectricData, plot(FullDATE, Sub_metering_1,
                         type="l", xlab="", ylab="Energy sub metering"))
 with(ElectricData, points(FullDATE, Sub_metering_2,
