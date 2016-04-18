@@ -15,6 +15,7 @@ ElectricData$FullDATE <- strptime(paste(ElectricData$Date,ElectricData$Time),"%d
 
 ## Plot 4
 par(mfrow = c(2,2), mar = c(4,4,1,1))
+quartz()
 plot(ElectricData$FullDATE, ElectricData$Global_active_powe,
      type="l", xlab="", ylab="Global Active Power")
 with(ElectricData, plot(FullDATE, Voltage,
